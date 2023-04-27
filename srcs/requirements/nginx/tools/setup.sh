@@ -5,12 +5,6 @@ openssl req -newkey rsa:4096 -days 30 -nodes -x509 \
     -keyout "/etc/ssl/${INTRA_ID}.42.fr.key" \
     -out "/etc/ssl/${INTRA_ID}.42.fr.crt" 2>/dev/null
 
-echo "\
---------------------
-
-@nginx ready
-@port:443
-
---------------------"
+echo "nginx ready, port is 443"
 
 exec nginx -g 'daemon off;'
