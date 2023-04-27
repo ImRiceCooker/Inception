@@ -11,7 +11,6 @@ rm -rf ${wordpress_path}
 rm -rf ${mariadb_path}
 
 
-if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    sudo sed -i "/${conf}/d" ${hosts_path}
+sudo sed -i "/${conf}/d" ${hosts_path}
 
 echo "fclean"

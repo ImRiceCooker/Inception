@@ -11,8 +11,7 @@
 intra_id=jeongkpa
 
 
-if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    volume_path=/home/${intra_id}/data
+volume_path=/home/${intra_id}/data
 
 wordpress_path=${volume_path}/wordpress
 mariadb_path=${volume_path}/mariadb
