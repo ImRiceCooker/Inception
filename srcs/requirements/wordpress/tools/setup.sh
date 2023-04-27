@@ -23,12 +23,6 @@ wp-cli theme install twentytwenty --allow-root
 wp-cli theme update twentytwenty --allow-root
 wp-cli theme activate twentytwenty --allow-root
 
-echo "\
---------------------
-
-@wordpress ready
-@port:9000
-
---------------------"
+echo "wordpress ready, port is 9000"
 
 exec /usr/sbin/php-fpm7.3 -F

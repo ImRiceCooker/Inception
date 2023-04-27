@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#info.sh에 설정되어 있는 환경변수 wordpress_path를 사용합니다.
-wordpress_path=$($(pwd)/srcs/requirements/tools/info.sh wordpress_path)
-#info.sh에 설정되어 있는 환경변수 wordpress_path를 사용합니다.
-mariadb_path=$($(pwd)/srcs/requirements/tools/info.sh mariadb_path)
+#get_path.sh에 설정되어 있는 환경변수 wordpress_path를 사용합니다.
+wordpress_path=$($(pwd)/srcs/requirements/tools/get_path.sh wordpress_path)
+#get_path.sh에 설정되어 있는 환경변수 wordpress_path를 사용합니다.
+mariadb_path=$($(pwd)/srcs/requirements/tools/get_path.sh mariadb_path)
 
 if [ ! -d ${wordpress_path} ]; then
     mkdir -p ${wordpress_path}
