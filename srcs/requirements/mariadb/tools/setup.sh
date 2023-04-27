@@ -17,12 +17,6 @@ flush privileges;
 EOF
 fi
 
-echo "\
---------------------
-
-@mariadb ready
-@port:3306
-
---------------------"
+echo "mariadb ready, port is 3306"
 
 exec mysqld --datadir=/var/lib/mysql
