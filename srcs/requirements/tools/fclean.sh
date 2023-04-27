@@ -10,10 +10,8 @@ hosts_path=$($(pwd)/srcs/requirements/tools/get_path.sh hosts_path)
 rm -rf ${wordpress_path}
 rm -rf ${mariadb_path}
 
-if [ "$(uname)" == "Darwin" ]; then
-    sed -i '' "/${conf}/d" ${hosts_path}
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    sed -i "/${conf}/d" ${hosts_path}
-fi
+
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    sudo sed -i "/${conf}/d" ${hosts_path}
 
 echo "fclean"

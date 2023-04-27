@@ -10,11 +10,9 @@
 
 intra_id=jeongkpa
 
-if [ "$(uname)" == "Darwin" ]; then
-    volume_path=/Users/jeongkpa/goinfre/data
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     volume_path=/home/${intra_id}/data
-fi
 
 wordpress_path=${volume_path}/wordpress
 mariadb_path=${volume_path}/mariadb
