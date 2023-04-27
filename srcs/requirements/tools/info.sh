@@ -11,15 +11,8 @@
 
 intra_id=jeongkpa
 
-# * ----------------------------------------------------------
-if [ "$(uname)" == "Darwin" ]; then
-    # Do something under Mac OS X platform        
-    volume_path=/Users/jeongkpa/goinfree/docker_study/inception2/data # 이건 내 mac에서 테스트할 경로
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    # Do something under GNU/Linux platform
-    volume_path=/home/${intra_id}/data
-fi
-# * ----------------------------------------------------------
+volume_path=/home/${intra_id}/data
+
 wordpress_path=${volume_path}/wordpress
 mariadb_path=${volume_path}/mariadb
 
