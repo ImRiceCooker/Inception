@@ -21,10 +21,9 @@ mariadb_path=${volume_path}/mariadb
 
 
 # * ----------------------------------------------------------
-# change your localhost by {intra}.42.fr
-# (1) Go to the file /etc/hosts
+# set path /etc/hosts
 hosts_path="/etc/hosts"
-# (2) Add the following line : "127.0.01 {intra}.42.fr"
+# add "127.0.01 {intra}.42.fr"
 conf="127.0.0.1 ${intra_id}.42.fr"
 # * ----------------------------------------------------------
 
